@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NotFoudBlock = () => {
+const NotFoundBlock = () => {
   return (
     <div className="not-found">
       <h1>
@@ -13,4 +13,4 @@ const NotFoudBlock = () => {
   );
 };
 
-export default NotFoudBlock;
+export default NotFoundBlock;

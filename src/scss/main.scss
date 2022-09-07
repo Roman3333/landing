@@ -1,17 +1,77 @@
+@import './components/all';
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
 body {
-  margin: 0;
+  font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+.not-found {
+  padding: 100px;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+
+  span {
+    font-size: 64px;
+  }
+}
+
+.description {
+  font-size: 22px;
 }
