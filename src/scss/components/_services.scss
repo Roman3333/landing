@@ -1,0 +1,53 @@
+.services {
+  font-size: 20px;
+  background-image: url('../../../src/img/background.jpg');
+  height: 100vh;
+  padding-top: 75px;
+  color: #fff;
+  &__title {
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    color: black;
+  }
+  &__item {
+    max-width: 350px;
+    width: 100%;
+    padding: 15px 10px;
+    text-align: center;
+    background-color: #666868;
+    border-radius: 15px;
+  }
+  &__item-title {
+    font-size: 28px;
+  }
+  &__item-suptitle {
+    font-size: 20px;
+    max-width: 250px;
+    margin: 10px auto;
+  }
+  &__item-text {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  &__guarantee {
+    display: flex;
+  }
+  &__guarantee-item {
+    width: calc(100% / 4 - 60px);
+    margin: 0 30px;
+    text-align: center;
+  }
+  &__guarantee-title {
+    margin: 10px 0;
+    font-weight: 700;
+  }
+  &__guarantee-desc {
+    font-size: 18px;
+  }
+}
