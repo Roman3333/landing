@@ -9,6 +9,7 @@ const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
+        <h2 className="portfolio__main-title">Наши работы</h2>
         <div className="portfolio__items">
           <div className="portfolio__item">
             <a className="portfolio__link" href="https://aviamed.ru/" target="_blank">

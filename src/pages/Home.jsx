@@ -3,6 +3,7 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Price from '../components/Price';
 import About from '../components/About';
+import Form from '../components/Form';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Portfolio />
       <Price />
       <About />
+      <Form />
     </>
   );
 };
