@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import Footer from './components/Footer';
@@ -9,9 +9,10 @@ import NotFound from './pages/NotFound';
 import './scss/main.scss';
 
 function App() {
+  const [popupVisible, setPopupVisible] = useState(false);
   return (
     <div className="app">
-      <Header />
+      <Header popupVisible={popupVisible} setPopupVisible={setPopupVisible} />
 
       <main className="main">
         <Routes>
