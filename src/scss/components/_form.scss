@@ -67,15 +67,6 @@
     &:focus {
       outline: none;
     }
-    &:nth-child(1)::after {
-      position: absolute;
-      content: '22';
-      top: 10px;
-      right: 10px;
-      width: 10px;
-      height: 10px;
-      background-color: #00ace9;
-    }
   }
   &__submit {
     margin-top: 35px;

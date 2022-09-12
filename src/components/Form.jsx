@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function Form({ popupVisible, setPopupVisible }) {
+  const [message, setMessage] = useState('');
   const {
     register,
     handleSubmit,
@@ -10,6 +11,7 @@ export default function Form({ popupVisible, setPopupVisible }) {
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
+    alert(message);
   };
 
   return popupVisible === true ? (
@@ -31,27 +33,27 @@ export default function Form({ popupVisible, setPopupVisible }) {
         </div>
         <div className="form__item">
           <input
-            className="form__input required"
+            className="form__input"
             {...register('fullname', {
               required: true,
               maxLength: 30,
               minLength: 3,
               pattern: /^[A-Za-zА-Яа-я ]+$/i,
             })}
-            placeholder="Имя"
+            placeholder="Имя(обязательно)"
             type="name"
           />
           {errors.fullname && <p className="form__p">Только буквы и не менее 3 символов</p>}
         </div>
         <div className="form__item">
           <input
-            className="form__input required"
+            className="form__input"
             {...register('phone', {
               required: true,
               maxLength: 30,
               minLength: 3,
             })}
-            placeholder="Телефон"
+            placeholder="Телефон(обязательно)"
             type="phone"
           />
           {errors.fullname && <p className="form__p">Введите телефон</p>}
@@ -70,8 +72,11 @@ export default function Form({ popupVisible, setPopupVisible }) {
         <div className="form__item">
           <textarea
             className="form__input area"
-            name="сообщение"
-            placeholder="Сообщение"></textarea>
+            onChange={(e) => setMessage(e.target.value)}
+            name="text"
+            placeholder="Сообщение">
+            {message}
+          </textarea>
         </div>
         <input className="form__submit" type="submit" />
       </form>
