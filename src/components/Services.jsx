@@ -1,17 +1,30 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import garant1 from '../../src/img/garant1.png';
 import garant2 from '../../src/img/garant2.png';
 import garant3 from '../../src/img/garant3.png';
 import garant4 from '../../src/img/garant4.png';
 
+const textAnimation = {
+  hidden: {
+    y: -70,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 2 },
+  }),
+};
+
 const Services = () => {
   return (
-    <section className="services" id="services">
+    <motion.section initial="hidden" whileInView="visible" className="services" id="services">
       <div className="container">
         <h1 className="services__title">Разработка и поддержка сайтов с гарантией результата</h1>
         <div className="services__items">
-          <div className="services__item">
+          <motion.div variants={textAnimation} className="services__item">
             <h3 className="services__item-title">Разработка</h3>
             <p className="services__item-suptitle">
               Качественный сайт по <strong>оптимальной цене</strong>
@@ -21,8 +34,8 @@ const Services = () => {
               для компаний из различных отраслей.
             </p>
             <p className="services__item-text">Возвращаем деньги если нарушим сроки.</p>
-          </div>
-          <div className="services__item">
+          </motion.div>
+          <motion.div variants={textAnimation} className="services__item">
             <h3 className="services__item-title">Поддержка</h3>
             <p className="services__item-suptitle">
               Поддержка сайта по <strong>оптимальной цене</strong>
@@ -33,8 +46,8 @@ const Services = () => {
             <p className="services__item-text">
               Если не будет результатов — заплатим вам за невыполненные обязательства.
             </p>
-          </div>
-          <div className="services__item">
+          </motion.div>
+          <motion.div variants={textAnimation} className="services__item">
             <h3 className="services__item-title">Доработка</h3>
             <p className="services__item-suptitle">
               Доработка сайта по <strong>оптимальной цене</strong>
@@ -45,7 +58,7 @@ const Services = () => {
               технической поддержки.
             </p>
             <p className="services__item-text">Возвращаем деньги если нарушим сроки.</p>
-          </div>
+          </motion.div>
         </div>
         <div className="services__guarantee">
           <div className="services__guarantee-item">
@@ -86,7 +99,7 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

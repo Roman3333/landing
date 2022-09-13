@@ -5,12 +5,12 @@ import Price from '../components/Price';
 import About from '../components/About';
 import Form from '../components/Form';
 
-const Home = () => {
+const Home = ({ setPopupVisible }) => {
   return (
     <>
       <Services />
       <Portfolio />
-      <Price />
+      <Price setPopupVisible={setPopupVisible} />
       <About />
       <Form />
     </>

@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 
 export default function Form({ popupVisible, setPopupVisible }) {
-  const [message, setMessage] = useState('');
   const {
     register,
     handleSubmit,
@@ -11,7 +10,6 @@ export default function Form({ popupVisible, setPopupVisible }) {
 
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
-    alert(message);
   };
 
   return popupVisible === true ? (
@@ -36,8 +34,8 @@ export default function Form({ popupVisible, setPopupVisible }) {
             className="form__input"
             {...register('fullname', {
               required: true,
-              maxLength: 30,
-              minLength: 3,
+              maxLength: 40,
+              minLength: 2,
               pattern: /^[A-Za-zА-Яа-я ]+$/i,
             })}
             placeholder="Имя(обязательно)"
@@ -51,7 +49,7 @@ export default function Form({ popupVisible, setPopupVisible }) {
             {...register('phone', {
               required: true,
               maxLength: 30,
-              minLength: 3,
+              minLength: 2,
             })}
             placeholder="Телефон(обязательно)"
             type="phone"
@@ -72,11 +70,9 @@ export default function Form({ popupVisible, setPopupVisible }) {
         <div className="form__item">
           <textarea
             className="form__input area"
-            onChange={(e) => setMessage(e.target.value)}
-            name="text"
-            placeholder="Сообщение">
-            {message}
-          </textarea>
+            {...register('message', {})}
+            placeholder="Сообщение"
+          />
         </div>
         <input className="form__submit" type="submit" />
       </form>

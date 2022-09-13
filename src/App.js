@@ -16,7 +16,7 @@ function App() {
 
       <main className="main">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/landing" element={<Home setPopupVisible={setPopupVisible} />} />
 
           {/* <Route path="/react-food/pizza/:id" element={<FullItemPage />} /> */}
           <Route

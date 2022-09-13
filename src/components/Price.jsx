@@ -1,6 +1,10 @@
 import React from 'react';
 
-const Price = () => {
+const Price = ({ setPopupVisible }) => {
+  const stopDefault = (e) => {
+    e.preventDefault();
+    setPopupVisible(true);
+  };
   return (
     <section className="price" id="price">
       <div className="container">
@@ -12,7 +16,7 @@ const Price = () => {
             </div>
             <div className="price__price">от 1 000 ₽</div>
             <div className="price__link-box">
-              <a className="price__link" href="#">
+              <a className="price__link" href="#" onClick={stopDefault}>
                 Отправить заявку
                 <svg
                   width="32"
@@ -34,7 +38,7 @@ const Price = () => {
             </div>
             <div className="price__price">от 30 000 ₽</div>
             <div className="price__link-box">
-              <a className="price__link" href="#">
+              <a className="price__link" href="#" onClick={stopDefault}>
                 Отправить заявку
                 <svg
                   width="32"
@@ -56,7 +60,7 @@ const Price = () => {
             </div>
             <div className="price__price">от 40 000 ₽</div>
             <div className="price__link-box">
-              <a className="price__link" href="#">
+              <a className="price__link" href="#" onClick={stopDefault}>
                 Отправить заявку
                 <svg
                   width="32"
@@ -78,7 +82,7 @@ const Price = () => {
             </div>
             <div className="price__price">от 100 000 ₽</div>
             <div className="price__link-box">
-              <a className="price__link" href="#">
+              <a className="price__link" href="#" onClick={stopDefault}>
                 Отправить заявку
                 <svg
                   width="32"
@@ -100,7 +104,7 @@ const Price = () => {
             </div>
             <div className="price__price">от 150 000 ₽</div>
             <div className="price__link-box">
-              <a className="price__link" href="#">
+              <a className="price__link" href="#" onClick={stopDefault}>
                 Отправить заявку
                 <svg
                   width="32"
@@ -122,7 +126,7 @@ const Price = () => {
             </div>
             <div className="price__price">от 800 000 ₽</div>
             <div className="price__link-box">
-              <a className="price__link" href="#">
+              <a className="price__link" href="#" onClick={stopDefault}>
                 Отправить заявку
                 <svg
                   width="32"
@@ -144,7 +148,7 @@ const Price = () => {
             </div>
             <div className="price__price">от 800 000 ₽</div>
             <div className="price__link-box">
-              <a className="price__link" href="#">
+              <a className="price__link" href="#" onClick={stopDefault}>
                 Отправить заявку
                 <svg
                   width="32"
