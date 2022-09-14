@@ -9,7 +9,7 @@ const Home = ({ setPopupVisible }) => {
   return (
     <>
       <Services />
-      <Portfolio />
+      <Portfolio itemsPerPage={6} />
       <Price setPopupVisible={setPopupVisible} />
       <About />
       <Form />

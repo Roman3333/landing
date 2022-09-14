@@ -4,7 +4,7 @@ import Form from './Form';
 
 const Header = ({ popupVisible, setPopupVisible }) => {
   return (
-    <header className="header">
+    <header className="header" style={popupVisible ? { opacity: 1 } : { opacity: 0.96 }}>
       <div className="container">
         <nav className="header__nav">
           <ul className="header__list">

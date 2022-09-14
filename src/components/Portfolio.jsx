@@ -1,10 +1,20 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import ReactPaginate from 'react-paginate';
+
+import PortfolioItem from './PortfolioItem';
 
 import work1 from '../../src/img/work1.jpg';
 import work2 from '../../src/img/work2.jpg';
 import work3 from '../../src/img/work3.jpg';
 import work4 from '../../src/img/work4.jpg';
+import work5 from '../../src/img/work5.jpg';
+import work6 from '../../src/img/work6.jpg';
+import work7 from '../../src/img/work7.jpg';
+import work8 from '../../src/img/work8.jpg';
+import work9 from '../../src/img/work9.jpg';
+import work10 from '../../src/img/work10.jpg';
+import work11 from '../../src/img/work11.jpg';
 
 const textAnimation = {
   hidden: {
@@ -18,7 +28,67 @@ const textAnimation = {
   }),
 };
 
-const Portfolio = () => {
+const items = [
+  {
+    title: ' Чемпион',
+    desc: 'Портал в сфере здравохране',
+    img: work9,
+    href: 'https://chess-sibay.ru/',
+  },
+  {
+    title: 'Уютный',
+    desc: 'Портал в сфере здравохране',
+    img: work10,
+    href: 'https://hotel-sibai.ru/',
+  },
+  {
+    title: 'Общество урологов',
+    desc: 'Портал в сфере здравохране',
+    img: work11,
+    href: 'https://ourorb.ru/',
+  },
+  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: 'https://aviamed.ru/' },
+  {
+    title: 'Prozrenie',
+    desc: 'Портал в сфере здравохране',
+    img: work2,
+    href: 'http://prozrenie.ru/',
+  },
+  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work3, href: 'http://nelt.ru/' },
+  {
+    title: 'Aviamed',
+    desc: 'Портал в сфере здравохране',
+    img: work4,
+    href: 'https://sibay-cnkid.ru/',
+  },
+
+  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
+  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
+  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
+  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
+];
+
+const Portfolio = ({ itemsPerPage }) => {
+  const [currentItems, setCurrentItems] = useState(items);
+  const [pageCount, setPageCount] = useState(0);
+
+  const [itemOffset, setItemOffset] = useState(0);
+
+  useEffect(() => {
+    // Fetch items from another resources.
+    const endOffset = itemOffset + itemsPerPage;
+    console.log(`Loading items from ${itemOffset} to ${endOffset}`);
+    setCurrentItems(items.slice(itemOffset, endOffset));
+    setPageCount(Math.ceil(items.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage]);
+
+  // Invoke when user click to request another page.
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * itemsPerPage) % items.length;
+    console.log(`User requested page number ${event.selected}, which is offset ${newOffset}`);
+    setItemOffset(newOffset);
+  };
+
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
@@ -31,7 +101,7 @@ const Portfolio = () => {
           Наши работы
         </motion.h2>
         <div className="portfolio__items">
-          <motion.div
+          {/* <motion.div
             initial="hidden"
             whileInView="visible"
             custom={1}
@@ -58,7 +128,7 @@ const Portfolio = () => {
                 </div>
               </div>
               <div className="portfolio__title">Aviamed</div>
-              <div className="portfolio__desc">Портал в сфере здравохранения </div>
+              <div className="portfolio__desc">Портал в сфере здравохранения</div>
             </a>
           </motion.div>
           <motion.div
@@ -210,7 +280,19 @@ const Portfolio = () => {
               <div className="portfolio__title">Aviamed</div>
               <div className="portfolio__desc">Портал в сфере здравохранения </div>
             </a>
-          </motion.div>
+          </motion.div> */}
+          {currentItems.map((item, index) => {
+            return <PortfolioItem {...item} key={index} />;
+          })}
+          <ReactPaginate
+            breakLabel="..."
+            nextLabel=">"
+            onPageChange={handlePageClick}
+            pageRangeDisplayed={5}
+            pageCount={pageCount}
+            previousLabel="<"
+            renderOnZeroPageCount={null}
+          />
         </div>
       </div>
     </section>

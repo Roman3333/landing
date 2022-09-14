@@ -1,4 +1,5 @@
 .portfolio {
+  height: 939px;
   margin-top: 30px;
   padding: 10px 0 20px;
   background-color: #f9f9fb;
@@ -73,13 +74,35 @@
   &__desc {
     padding-left: 5px;
   }
-}
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
+  ul {
+    margin: 0 auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  li {
+    display: inline-block;
+    &.selected {
+      a {
+        background-color: aqua;
+        color: #fff;
+      }
+    }
+    a {
+      text-align: center;
+      width: 45px;
+      line-height: 42px;
+      height: 45px;
+      border: 1px solid aqua;
+      border-radius: 30px;
+      margin-right: 10px;
+      cursor: pointer;
+      display: inline-block;
+      color: aqua;
+
+      &:hover {
+        background-color: aqua;
+        color: #fff;
+      }
+    }
   }
 }
