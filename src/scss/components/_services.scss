@@ -3,6 +3,7 @@
   background-color: #e9e9e9;
   height: 100vh;
   padding-top: 75px;
+
   color: rgb(66, 63, 97);
   &__title {
     font-size: 3em;
@@ -18,17 +19,14 @@
   &__item {
     max-width: 350px;
     width: 100%;
+    display: block;
     padding: 15px 10px;
     text-align: center;
     background-color: #fff;
-    border: 0 solid gold;
     border-radius: 15px;
-    transition: 0.5s;
+    transition: 0.3s;
     &:hover {
-      border: 1px solid gold;
-      border-top: none;
-      border-bottom: none;
-      border-radius: 30px/90px;
+      box-shadow: 0 0 5px 5px #dbcdcd;
     }
   }
   &__item-title {
@@ -48,14 +46,57 @@
   }
   &__guarantee-item {
     width: calc(100% / 4 - 60px);
+    position: relative;
+    height: 270px;
     margin: 0 30px;
+    padding: 5px;
     text-align: center;
     transition: 0.3s;
     position: relative;
     border: 0 solid gold;
     border-radius: 20px;
+    background-color: #fff;
+    &:nth-child(1)::after {
+      position: absolute;
+      content: '';
+      top: 20%;
+      right: -26%;
+      width: 60px;
+      height: 5px;
+      background-color: aqua;
+      z-index: 20;
+    }
+    &:nth-child(2) {
+      margin-top: 13px;
+      &::after {
+        position: absolute;
+        content: '';
+        top: 20%;
+        right: -26%;
+        width: 60px;
+        height: 5px;
+        background-color: aqua;
+        z-index: 20;
+      }
+    }
+    &:nth-child(3) {
+      margin-top: 26px;
+      &::after {
+        position: absolute;
+        content: '';
+        top: 20%;
+        right: -26%;
+        width: 60px;
+        height: 5px;
+        background-color: aqua;
+        z-index: 20;
+      }
+    }
+    &:nth-child(4) {
+      margin-top: 39px;
+    }
     &:hover {
-      box-shadow: 0 0 5px 5px #ddd;
+      box-shadow: 0 0 5px 5px #dbcdcd;
     }
   }
   &__guarantee-title {

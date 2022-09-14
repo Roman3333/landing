@@ -1,17 +1,42 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 import work1 from '../../src/img/work1.jpg';
 import work2 from '../../src/img/work2.jpg';
 import work3 from '../../src/img/work3.jpg';
 import work4 from '../../src/img/work4.jpg';
 
+const textAnimation = {
+  hidden: {
+    y: -50,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
 const Portfolio = () => {
   return (
     <section className="portfolio" id="portfolio">
       <div className="container">
-        <h2 className="portfolio__main-title">Наши работы</h2>
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          custom={1}
+          variants={textAnimation}
+          className="portfolio__main-title">
+          Наши работы
+        </motion.h2>
         <div className="portfolio__items">
-          <div className="portfolio__item">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="portfolio__item">
             <a className="portfolio__link" href="https://aviamed.ru/" target="_blank">
               <div className="portfolio__img">
                 <img src={work1} alt="work1" />
@@ -35,8 +60,13 @@ const Portfolio = () => {
               <div className="portfolio__title">Aviamed</div>
               <div className="portfolio__desc">Портал в сфере здравохранения </div>
             </a>
-          </div>
-          <div className="portfolio__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="portfolio__item">
             <a className="portfolio__link" href="http://prozrenie.ru/" target="_blank">
               <div className="portfolio__img">
                 <img src={work2} alt="work2" />
@@ -60,8 +90,13 @@ const Portfolio = () => {
               <div className="portfolio__title">Prozrenie</div>
               <div className="portfolio__desc">Корпоративный сайт о: бла бла бла бла бла </div>
             </a>
-          </div>
-          <div className="portfolio__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="portfolio__item">
             <a className="portfolio__link" href="http://nelt.ru/" target="_blank">
               <div className="portfolio__img">
                 <img src={work4} alt="work4" />
@@ -85,8 +120,13 @@ const Portfolio = () => {
               <div className="portfolio__title">Nelt</div>
               <div className="portfolio__desc">Портал в сфере здравохранения </div>
             </a>
-          </div>
-          <div className="portfolio__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="portfolio__item">
             <a className="portfolio__link" href="https://sibay-cnkid.ru/" target="_blank">
               <div className="portfolio__img">
                 <img src={work3} alt="work3" />
@@ -110,8 +150,13 @@ const Portfolio = () => {
               <div className="portfolio__title">Sibay-cnkid</div>
               <div className="portfolio__desc">Портал в сфере здравохранения </div>
             </a>
-          </div>
-          <div className="portfolio__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="portfolio__item">
             <a className="portfolio__link" href="https://aviamed.ru/" target="_blank">
               <div className="portfolio__img">
                 <img src={work1} alt="work1" />
@@ -135,8 +180,13 @@ const Portfolio = () => {
               <div className="portfolio__title">Aviamed</div>
               <div className="portfolio__desc">Портал в сфере здравохранения </div>
             </a>
-          </div>
-          <div className="portfolio__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="portfolio__item">
             <a className="portfolio__link" href="https://aviamed.ru/" target="_blank">
               <div className="portfolio__img">
                 <img src={work1} alt="work1" />
@@ -160,7 +210,7 @@ const Portfolio = () => {
               <div className="portfolio__title">Aviamed</div>
               <div className="portfolio__desc">Портал в сфере здравохранения </div>
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

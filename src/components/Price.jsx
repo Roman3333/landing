@@ -1,4 +1,17 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+
+const textAnimation = {
+  hidden: {
+    x: -40,
+    opacity: 0,
+  },
+  visible: (custom) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
 
 const Price = ({ setPopupVisible }) => {
   const stopDefault = (e) => {
@@ -10,7 +23,12 @@ const Price = ({ setPopupVisible }) => {
       <div className="container">
         <h3 className="price__title">Цены на услуги разработки сайта под ключ</h3>
         <div className="price__items">
-          <div className="price__item">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="price__item">
             <div className="price__name">
               Доработка <span> сайта</span>
             </div>
@@ -31,8 +49,13 @@ const Price = ({ setPopupVisible }) => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="price__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="price__item">
             <div className="price__name">
               Создание <span>landing page</span> (одностраничника)
             </div>
@@ -53,8 +76,13 @@ const Price = ({ setPopupVisible }) => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="price__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="price__item">
             <div className="price__name">
               Создание <span>cайта-визитки</span> (многостраничника)
             </div>
@@ -75,8 +103,13 @@ const Price = ({ setPopupVisible }) => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="price__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="price__item">
             <div className="price__name">
               Создание <span>корпоративного сайта</span>{' '}
             </div>
@@ -97,8 +130,13 @@ const Price = ({ setPopupVisible }) => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="price__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="price__item">
             <div className="price__name">
               Создание <span>интернет-магазина</span>
             </div>
@@ -119,8 +157,13 @@ const Price = ({ setPopupVisible }) => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="price__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="price__item">
             <div className="price__name">
               Создание <span>маркетплейса</span>
             </div>
@@ -141,8 +184,13 @@ const Price = ({ setPopupVisible }) => {
                 </svg>
               </a>
             </div>
-          </div>
-          <div className="price__item">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            custom={1}
+            variants={textAnimation}
+            className="price__item">
             <div className="price__name">
               Создание <span>портала</span>
             </div>
@@ -163,7 +211,7 @@ const Price = ({ setPopupVisible }) => {
                 </svg>
               </a>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

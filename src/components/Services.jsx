@@ -8,13 +8,13 @@ import garant4 from '../../src/img/garant4.png';
 
 const textAnimation = {
   hidden: {
-    y: -70,
+    y: -60,
     opacity: 0,
   },
   visible: (custom) => ({
     y: 0,
     opacity: 1,
-    transition: { delay: custom * 2 },
+    transition: { delay: custom * 0.2 },
   }),
 };
 
@@ -61,7 +61,7 @@ const Services = () => {
           </motion.div>
         </div>
         <div className="services__guarantee">
-          <div className="services__guarantee-item">
+          <motion.div custom={0.5} variants={textAnimation} className="services__guarantee-item">
             <div className="services__guarantee-img">
               <img src={garant1} alt="garant-1" />
             </div>
@@ -69,8 +69,8 @@ const Services = () => {
             <div className="services__guarantee-desc">
               В случае нарушения сроков пересчитаем стоимость услуг.
             </div>
-          </div>
-          <div className="services__guarantee-item">
+          </motion.div>
+          <motion.div custom={1} variants={textAnimation} className="services__guarantee-item">
             <div className="services__guarantee-img">
               <img src={garant2} alt="garant-1" />
             </div>
@@ -78,8 +78,8 @@ const Services = () => {
             <div className="services__guarantee-desc">
               С вами будет работать команда, имеющая подтверждение опыта и обучения.
             </div>
-          </div>
-          <div className="services__guarantee-item">
+          </motion.div>
+          <motion.div custom={1.5} variants={textAnimation} className="services__guarantee-item">
             <div className="services__guarantee-img">
               <img src={garant3} alt="garant-1" />
             </div>
@@ -87,8 +87,8 @@ const Services = () => {
             <div className="services__guarantee-desc">
               Если мы не достигнем результатов — вернем деньги за невыполненные обязательства.
             </div>
-          </div>
-          <div className="services__guarantee-item">
+          </motion.div>
+          <motion.div custom={2} variants={textAnimation} className="services__guarantee-item">
             <div className="services__guarantee-img">
               <img src={garant4} alt="garant-1" />
             </div>
@@ -96,7 +96,7 @@ const Services = () => {
             <div className="services__guarantee-desc">
               Цена фиксируется в договоре и не может быть изменена без согласования с клиентом.
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </motion.section>
