@@ -109,7 +109,13 @@ const Header = ({ popupVisible, setPopupVisible }) => {
                 </a>
               </span>
             </div>
-            <a onClick={() => setPopupVisible(true)} href="#" className="header__connect-form">
+            <a
+              onClick={(e) => {
+                e.preventDefault();
+                setPopupVisible(true);
+              }}
+              href="#"
+              className="header__connect-form">
               Заказать услуги
             </a>
           </div>

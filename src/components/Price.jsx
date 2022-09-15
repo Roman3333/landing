@@ -28,6 +28,7 @@ const Price = ({ setPopupVisible }) => {
             whileInView="visible"
             custom={1}
             variants={textAnimation}
+            viewport={{ once: true }}
             className="price__item">
             <div className="price__name">
               Доработка <span> сайта</span>
@@ -55,6 +56,7 @@ const Price = ({ setPopupVisible }) => {
             whileInView="visible"
             custom={1}
             variants={textAnimation}
+            viewport={{ once: true }}
             className="price__item">
             <div className="price__name">
               Создание <span>landing page</span> (одностраничника)
@@ -82,6 +84,7 @@ const Price = ({ setPopupVisible }) => {
             whileInView="visible"
             custom={1}
             variants={textAnimation}
+            viewport={{ once: true }}
             className="price__item">
             <div className="price__name">
               Создание <span>cайта-визитки</span> (многостраничника)
@@ -109,6 +112,7 @@ const Price = ({ setPopupVisible }) => {
             whileInView="visible"
             custom={1}
             variants={textAnimation}
+            viewport={{ once: true }}
             className="price__item">
             <div className="price__name">
               Создание <span>корпоративного сайта</span>{' '}
@@ -136,6 +140,7 @@ const Price = ({ setPopupVisible }) => {
             whileInView="visible"
             custom={1}
             variants={textAnimation}
+            viewport={{ once: true }}
             className="price__item">
             <div className="price__name">
               Создание <span>интернет-магазина</span>
@@ -163,6 +168,7 @@ const Price = ({ setPopupVisible }) => {
             whileInView="visible"
             custom={1}
             variants={textAnimation}
+            viewport={{ once: true }}
             className="price__item">
             <div className="price__name">
               Создание <span>маркетплейса</span>
@@ -190,6 +196,7 @@ const Price = ({ setPopupVisible }) => {
             whileInView="visible"
             custom={1}
             variants={textAnimation}
+            viewport={{ once: true }}
             className="price__item">
             <div className="price__name">
               Создание <span>портала</span>

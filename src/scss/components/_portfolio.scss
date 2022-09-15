@@ -1,7 +1,6 @@
 .portfolio {
-  height: 939px;
   margin-top: 30px;
-  padding: 10px 0 20px;
+  padding: 10px 0 65px;
   background-color: #f9f9fb;
   &__main-title {
     text-align: center;
@@ -13,11 +12,12 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: relative;
   }
   &__item {
     max-width: 378px;
     width: 100%;
-    height: 380px;
+    height: 330px;
     background-color: #fff;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -26,7 +26,7 @@
     }
     &:hover .portfolio__title {
       transform: translateX(10px);
-      color: aqua;
+      color: #5d9cec;
     }
     &:hover .portfolio__back-box {
       display: block;
@@ -36,7 +36,7 @@
     display: block;
     max-width: 380px;
     width: 100%;
-    height: 380px;
+    height: 330px;
   }
   &__img {
     position: relative;
@@ -77,13 +77,17 @@
 
   ul {
     margin: 0 auto;
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   li {
     display: inline-block;
     &.selected {
       a {
-        background-color: aqua;
+        background-color: #4a89dc;
         color: #fff;
       }
     }
@@ -92,15 +96,15 @@
       width: 45px;
       line-height: 42px;
       height: 45px;
-      border: 1px solid aqua;
+      border: 1px solid #4a89dc;
       border-radius: 30px;
       margin-right: 10px;
       cursor: pointer;
       display: inline-block;
-      color: aqua;
+      color: #4a89dc;
 
       &:hover {
-        background-color: aqua;
+        background-color: #4a89dc;
         color: #fff;
       }
     }

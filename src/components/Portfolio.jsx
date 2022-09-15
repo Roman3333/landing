@@ -15,6 +15,7 @@ import work8 from '../../src/img/work8.jpg';
 import work9 from '../../src/img/work9.jpg';
 import work10 from '../../src/img/work10.jpg';
 import work11 from '../../src/img/work11.jpg';
+import work12 from '../../src/img/work12.jpg';
 
 const textAnimation = {
   hidden: {
@@ -31,41 +32,79 @@ const textAnimation = {
 const items = [
   {
     title: ' Чемпион',
-    desc: 'Портал в сфере здравохране',
+    desc: 'Корпоративный сайт для шахматного клуба',
     img: work9,
     href: 'https://chess-sibay.ru/',
+    animation: true,
   },
   {
     title: 'Уютный',
-    desc: 'Портал в сфере здравохране',
+    desc: 'Корпоративный сайт для гостевого дома',
     img: work10,
     href: 'https://hotel-sibai.ru/',
   },
   {
+    title: 'Центр культуры и досуга',
+    desc: 'Городской, новостной портал',
+    img: work3,
+    href: 'https://sibay-cnkid.ru/',
+  },
+  {
     title: 'Общество урологов',
-    desc: 'Портал в сфере здравохране',
+    desc: 'Портал в сфере здравохранения',
     img: work11,
     href: 'https://ourorb.ru/',
   },
-  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: 'https://aviamed.ru/' },
   {
-    title: 'Prozrenie',
+    title: 'Центравиамед',
+    desc: 'Портал в сфере здравохране',
+    img: work1,
+    href: 'https://aviamed.ru/',
+  },
+  {
+    title: 'Прозрение',
     desc: 'Портал в сфере здравохране',
     img: work2,
     href: 'http://prozrenie.ru/',
   },
-  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work3, href: 'http://nelt.ru/' },
   {
-    title: 'Aviamed',
-    desc: 'Портал в сфере здравохране',
+    title: 'Нэлт',
+    desc: 'Корпоративный сайт по продаже оборудования в области слаботочных систем',
     img: work4,
-    href: 'https://sibay-cnkid.ru/',
+    href: 'http://nelt.ru/',
   },
 
-  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
-  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
-  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
-  { title: 'Aviamed', desc: 'Портал в сфере здравохране', img: work1, href: '' },
+  {
+    title: 'TOA',
+    desc: 'Корпоративный сайт по продаже звукового и коммуникационного оборудования',
+    img: work7,
+    href: 'http://www.toa-sound.ru/',
+  },
+  {
+    title: 'Эрикссон ЛГ',
+    desc: 'Корпоративный сайт по продаже оборудования для связи',
+    img: work6,
+    href: 'http://www.lg-ats.ru/',
+  },
+  {
+    title: 'С150',
+    desc: 'Интернет магазин по продаже магнитол',
+    img: work5,
+    href: 'https://s150.ru/',
+  },
+  {
+    title: 'Спарта',
+    desc: 'Корпоративный сайт для коллегии адвокатов',
+    img: work8,
+    href: 'https://aksparta.ru/',
+  },
+  {
+    title: 'Спарта',
+    desc: 'Корпоративный сайт по продаже часов',
+    img: work12,
+    href: 'http://www.moba-time.ru/',
+    animation: false,
+  },
 ];
 
 const Portfolio = ({ itemsPerPage }) => {
@@ -97,6 +136,7 @@ const Portfolio = ({ itemsPerPage }) => {
           whileInView="visible"
           custom={1}
           variants={textAnimation}
+          viewport={{ once: true }}
           className="portfolio__main-title">
           Наши работы
         </motion.h2>

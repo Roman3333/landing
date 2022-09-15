@@ -20,7 +20,12 @@ const textAnimation = {
 
 const Services = () => {
   return (
-    <motion.section initial="hidden" whileInView="visible" className="services" id="services">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      className="services"
+      id="services">
       <div className="container">
         <h1 className="services__title">Разработка и поддержка сайтов с гарантией результата</h1>
         <div className="services__items">

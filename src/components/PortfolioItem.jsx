@@ -13,13 +13,14 @@ const textAnimation = {
   }),
 };
 
-const PortfolioItem = ({ title, desc, img, href }) => {
+const PortfolioItem = ({ title, desc, img, href, animation }) => {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
       custom={1}
       variants={textAnimation}
+      viewport={{ once: true }}
       className="portfolio__item">
       <a className="portfolio__link" href={href} target="_blank">
         <div className="portfolio__img">
