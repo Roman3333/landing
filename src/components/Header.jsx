@@ -2,11 +2,16 @@ import React from 'react';
 
 import Form from './Form';
 
+import logo from '../../src/img/romai.png';
+
 const Header = ({ popupVisible, setPopupVisible }) => {
   return (
     <header className="header" style={popupVisible ? { opacity: 1 } : { opacity: 0.96 }}>
       <div className="container">
         <nav className="header__nav">
+          <div className="header__img">
+            <img src={logo} alt="logo" />
+          </div>
           <ul className="header__list">
             <li className="header__item">
               <a className="header__link" href="#services">

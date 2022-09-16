@@ -9,6 +9,9 @@
   font-size: 22px;
   color: #fff;
   opacity: 0.96;
+  &__img img {
+    width: 132px;
+  }
   &__connect {
     display: flex;
     align-items: center;

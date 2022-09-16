@@ -56,10 +56,10 @@ const items = [
     href: 'https://ourorb.ru/',
   },
   {
-    title: 'Центравиамед',
-    desc: 'Портал в сфере здравохране',
-    img: work1,
-    href: 'https://aviamed.ru/',
+    title: 'С150',
+    desc: 'Интернет магазин по продаже магнитол',
+    img: work5,
+    href: 'https://s150.ru/',
   },
   {
     title: 'Прозрение',
@@ -72,6 +72,12 @@ const items = [
     desc: 'Корпоративный сайт по продаже оборудования в области слаботочных систем',
     img: work4,
     href: 'http://nelt.ru/',
+  },
+  {
+    title: 'Шнайдер Электрик',
+    desc: 'Корпоративный сайт, посвященный системам безопасности ESMI',
+    img: work1,
+    href: 'http://www.esmisys.ru/',
   },
 
   {
@@ -87,23 +93,16 @@ const items = [
     href: 'http://www.lg-ats.ru/',
   },
   {
-    title: 'С150',
-    desc: 'Интернет магазин по продаже магнитол',
-    img: work5,
-    href: 'https://s150.ru/',
-  },
-  {
     title: 'Спарта',
     desc: 'Корпоративный сайт для коллегии адвокатов',
     img: work8,
     href: 'https://aksparta.ru/',
   },
   {
-    title: 'Спарта',
+    title: 'МобаТайм',
     desc: 'Корпоративный сайт по продаже часов',
     img: work12,
     href: 'http://www.moba-time.ru/',
-    animation: false,
   },
 ];
 
