@@ -1,14 +1,29 @@
 import React from 'react';
 
 import Form from './Form';
+import Menu from './Menu';
 
 import logo from '../../src/img/romai.png';
 
-const Header = ({ popupVisible, setPopupVisible }) => {
+const Header = ({ popupVisible, setPopupVisible, menuActive, setMenuActive }) => {
   return (
     <header className="header" style={popupVisible ? { opacity: 1 } : { opacity: 0.96 }}>
       <div className="container">
         <nav className="header__nav">
+          <div className="header__burger" onClick={() => setMenuActive((prev) => !prev)}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="aqua"
+              viewBox="0 0 24.75 24.75">
+              <path
+                d="M0,3.875c0-1.104,0.896-2,2-2h20.75c1.104,0,2,0.896,2,2s-0.896,2-2,2H2C0.896,5.875,0,4.979,0,3.875z M22.75,10.375H2
+		c-1.104,0-2,0.896-2,2c0,1.104,0.896,2,2,2h20.75c1.104,0,2-0.896,2-2C24.75,11.271,23.855,10.375,22.75,10.375z M22.75,18.875H2
+		c-1.104,0-2,0.896-2,2s0.896,2,2,2h20.75c1.104,0,2-0.896,2-2S23.855,18.875,22.75,18.875z"
+              />
+            </svg>
+          </div>
           <div className="header__img">
             <img src={logo} alt="logo" />
           </div>
@@ -114,16 +129,17 @@ const Header = ({ popupVisible, setPopupVisible }) => {
                 </a>
               </span>
             </div>
-            <a
-              onClick={(e) => {
-                e.preventDefault();
-                setPopupVisible(true);
-              }}
-              href="#"
-              className="header__connect-form">
-              Заказать услуги
-            </a>
           </div>
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              setPopupVisible(true);
+            }}
+            href="#"
+            className="header__connect-form">
+            Заказать услуги
+          </a>
+          <Menu menuActive={menuActive} setMenuActive={setMenuActive} />
           <Form popupVisible={popupVisible} setPopupVisible={setPopupVisible} />
         </nav>
       </div>

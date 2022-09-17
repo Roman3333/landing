@@ -11,6 +11,9 @@
   .portfolio__item {
     margin: 0 10px 20px;
   }
+  .header__connect-box {
+    margin-right: -45px;
+  }
 }
 
 @media (max-width: 1103px) {
@@ -22,6 +25,30 @@
   }
   .services__guarantee-item {
     height: 308px;
+  }
+  .header__connect-box {
+    margin-right: -10px;
+  }
+  .about__left img {
+    max-width: 270px;
+  }
+}
+
+@media (max-width: 1020px) {
+  .services__item {
+    max-width: 290px;
+  }
+  .header__connect {
+    display: none;
+  }
+  .header__list {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+  .about__item {
+    max-width: 300px;
   }
 }
 
@@ -35,11 +62,46 @@
   .header {
     font-size: 20px;
   }
+  .about__left {
+    display: none;
+  }
+  .about__title-hidden {
+    display: block;
+  }
+}
+
+@media (max-width: 923px) {
+  .services__guarantee {
+    justify-content: center;
+  }
+  .services__guarantee-img {
+    display: none;
+  }
+  .services__guarantee-item {
+    width: 40%;
+    height: 145px;
+    margin-bottom: 10px;
+  }
+  .about__items {
+    justify-content: center;
+  }
+  .about__item {
+    margin: 8px 5px 15px;
+  }
 }
 
 @media (max-width: 906px) {
   .header__list {
     display: none;
+  }
+  .services__items {
+    flex-direction: column;
+  }
+  .services__item {
+    margin: 0 auto 10px;
+  }
+  .services {
+    height: auto;
   }
 }
 
@@ -49,9 +111,22 @@
   }
 }
 
+@media (max-width: 752px) {
+  .portfolio__item {
+    height: 300px;
+  }
+  .portfolio ul {
+    width: 360px;
+  }
+}
+
 @media (max-width: 726px) {
   .portfolio__item {
     height: 300px;
+  }
+
+  .price__link svg {
+    display: none;
   }
 }
 
@@ -59,16 +134,107 @@
   .services__title {
     font-size: 2.5em;
   }
+  .services__guarantee-item {
+    margin: 5px 5px;
+  }
+  .services__guarantee {
+    padding-bottom: 20px;
+  }
+  .menu__content {
+    width: 40%;
+  }
+  .blur {
+    left: 40%;
+    width: 80vw;
+  }
 }
 
 @media (max-width: 555px) {
   .services__title {
     font-size: 2em;
   }
+  .services__guarantee-item {
+    height: 180px;
+  }
+  .services__guarantee-title {
+    margin: 5px 0;
+  }
+  .services__guarantee-desc {
+    font-size: 15px;
+  }
+  .about__item {
+    border-bottom: 1px solid gray;
+    padding-bottom: 15px;
+  }
+  .price__item {
+    font-size: 18px;
+  }
+  .footer__inner {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer__inner-socials {
+    margin-right: 15px;
+  }
+  .footer__inner-items {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 484px) {
+  .price__item {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 449px) {
+  .menu__content {
+    width: 45%;
+  }
+  .blur {
+    left: 45%;
+  }
 }
 
 @media (max-width: 395px) {
   .services__title {
     font-size: 1.5em;
+  }
+  .menu__content {
+    width: 52%;
+  }
+  .blur {
+    left: 52%;
+  }
+}
+
+@media (max-width: 371px) {
+  .header__connect-form {
+    padding: 0 2px;
+    font-size: 16px;
+  }
+  .portfolio ul {
+    width: 290px;
+  }
+  .portfolio li {
+    width: 70px;
+  }
+  .portfolio ul li a {
+    min-width: 68px;
+  }
+  .price__item {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .services__guarantee-item {
+    width: 46%;
+  }
+  .portfolio__item {
+    height: 280px;
+  }
+  .portfolio__link {
+    height: 280px;
   }
 }

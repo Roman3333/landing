@@ -9,6 +9,9 @@
   font-size: 22px;
   color: #fff;
   opacity: 0.96;
+  &__burger {
+    display: none;
+  }
   &__img img {
     width: 132px;
   }
@@ -17,7 +20,7 @@
     align-items: center;
   }
   &__connect-box {
-    margin-right: 20px;
+    margin-right: -75px;
   }
   &__nav {
     position: relative;
@@ -42,14 +45,14 @@
   }
   &__connect-form {
     padding: 0 12px;
-    background-color: rgb(25 120 133);
+    background-color: rgb(44 161 177);
     border-radius: 10px;
     height: 45px;
     display: flex;
     align-items: center;
   }
   &__connect-form:hover {
-    background-color: rgb(30 57 102);
+    background-color: rgb(38 88 175);
     color: darkturquoise;
   }
   &__connect-link {
@@ -64,6 +67,19 @@
     margin-right: 15px;
     &:hover {
       color: darkturquoise;
+    }
+  }
+}
+
+.menu {
+  &__header {
+    margin-bottom: 5px;
+    margin-left: -106px;
+  }
+  &__item {
+    margin-bottom: 5px;
+    &:first-child {
+      margin-top: 10px;
     }
   }
 }

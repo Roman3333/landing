@@ -14,6 +14,14 @@
     font-size: 28px;
     font-weight: 700;
     color: #423f61;
+    &-hidden {
+      margin-bottom: 25px;
+      font-size: 28px;
+      font-weight: 700;
+      color: #423f61;
+      display: none;
+      text-align: center;
+    }
   }
   &__inner {
     display: flex;

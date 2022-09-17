@@ -67,7 +67,7 @@ const Footer = () => {
                       <stop offset="1" stopColor="#0a85d9" />
                     </linearGradient>
                     <path
-                      fill="url(#BiF7D16UlC0RZ_VqXJHnXa)"
+                      fill="lightskyblue"
                       d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"
                     />
                     <path

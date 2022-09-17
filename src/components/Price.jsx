@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const textAnimation = {
   hidden: {
-    x: -40,
+    x: -45,
     opacity: 0,
   },
   visible: (custom) => ({
@@ -26,7 +26,7 @@ const Price = ({ setPopupVisible }) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            custom={1}
+            custom={1.3}
             variants={textAnimation}
             viewport={{ once: true }}
             className="price__item">
@@ -54,7 +54,7 @@ const Price = ({ setPopupVisible }) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            custom={1}
+            custom={1.3}
             variants={textAnimation}
             viewport={{ once: true }}
             className="price__item">
@@ -82,7 +82,7 @@ const Price = ({ setPopupVisible }) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            custom={1}
+            custom={1.3}
             variants={textAnimation}
             viewport={{ once: true }}
             className="price__item">
@@ -110,7 +110,7 @@ const Price = ({ setPopupVisible }) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            custom={1}
+            custom={1.3}
             variants={textAnimation}
             viewport={{ once: true }}
             className="price__item">
@@ -138,7 +138,7 @@ const Price = ({ setPopupVisible }) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            custom={1}
+            custom={1.3}
             variants={textAnimation}
             viewport={{ once: true }}
             className="price__item">
@@ -166,7 +166,7 @@ const Price = ({ setPopupVisible }) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            custom={1}
+            custom={1.3}
             variants={textAnimation}
             viewport={{ once: true }}
             className="price__item">
@@ -194,7 +194,7 @@ const Price = ({ setPopupVisible }) => {
           <motion.div
             initial="hidden"
             whileInView="visible"
-            custom={1}
+            custom={1.3}
             variants={textAnimation}
             viewport={{ once: true }}
             className="price__item">

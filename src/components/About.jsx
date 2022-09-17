@@ -27,19 +27,18 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="container">
+        <h3 className="about__title-hidden">Почему мы?</h3>
         <div className="about__inner">
-          <div className="about__left">
-            <motion.h3
-              className="about__title"
-              initial="hidden"
-              whileInView="visible"
-              custom={2}
-              variants={textAnimation}
-              viewport={{ once: true }}>
-              Почему мы?
-            </motion.h3>
+          <motion.div
+            className="about__left"
+            initial="hidden"
+            whileInView="visible"
+            custom={2}
+            variants={textAnimation}
+            viewport={{ once: true }}>
+            <h3 className="about__title">Почему мы?</h3>
             <img src={programmist} alt="programmist" />
-          </div>
+          </motion.div>
           <div className="about__items">
             <motion.div
               className="about__item"
@@ -163,7 +162,7 @@ const About = () => {
               </div>
               <div className="about__info">
                 <div className="about__info-title">Опытная команда</div>
-                Наша команда сложилась давно, работает быстро и с удовольствием.
+                Наша команда сложилась давно, работает быстро и слаженно.
               </div>
             </motion.div>
           </div>

@@ -10,9 +10,15 @@ import './scss/main.scss';
 
 function App() {
   const [popupVisible, setPopupVisible] = useState(false);
+  const [menuActive, setMenuActive] = useState(false);
   return (
     <div className="app">
-      <Header popupVisible={popupVisible} setPopupVisible={setPopupVisible} />
+      <Header
+        popupVisible={popupVisible}
+        setPopupVisible={setPopupVisible}
+        menuActive={menuActive}
+        setMenuActive={setMenuActive}
+      />
 
       <main className="main">
         <Routes>
