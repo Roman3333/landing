@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 
 export default function Form({ popupVisible, setPopupVisible }) {
+  const useRefForm = useRef();
   const {
     register,
     handleSubmit,
@@ -9,12 +11,46 @@ export default function Form({ popupVisible, setPopupVisible }) {
   } = useForm();
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    emailjs
+      .sendForm('service_ow8s3xp', 'template_gf15uyp', useRefForm.current, '6qyznvT5gYn0B0MbA')
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+    useRefForm.current.reset();
+
+    // let faffaa = document.getElementById('form');
+    // console.log(faffaa);
+    // alert(JSON.stringify(data));
+
+    // let formData = new FormData(faffaa);
+    // formData.append('данные', data);
+
+    // let response = await fetch('sendmail.php', {
+    //   method: 'POST',
+    //   body: formData,
+    // });
+
+    // if (response.ok) {
+    //   let result = await response.json;
+    //   alert(result.message);
+    //   faffaa.reset();
+    // } else {
+    //   alert('ошибка');
+    // }
   };
 
   return popupVisible === true ? (
     <div onClick={() => setPopupVisible(false)} className="popup">
-      <form onClick={(e) => e.stopPropagation()} className="form" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        ref={useRefForm}
+        onClick={(e) => e.stopPropagation()}
+        className="form"
+        onSubmit={handleSubmit(onSubmit)}>
         <div className="form__title">Заказать ообратный звонок</div>
         <div onClick={() => setPopupVisible(false)} className="form__close">
           <svg
@@ -40,6 +76,7 @@ export default function Form({ popupVisible, setPopupVisible }) {
             })}
             placeholder="Имя(обязательно)"
             type="name"
+            name="fullname"
           />
           {errors.fullname && <p className="form__p">Только буквы и не менее 3 символов</p>}
         </div>
@@ -53,6 +90,7 @@ export default function Form({ popupVisible, setPopupVisible }) {
             })}
             placeholder="Телефон(обязательно)"
             type="phone"
+            name="phone"
           />
           {errors.fullname && <p className="form__p">Введите телефон</p>}
         </div>
@@ -60,11 +98,12 @@ export default function Form({ popupVisible, setPopupVisible }) {
           <input
             className="form__input"
             {...register('email', {
-              maxLength: 30,
-              minLength: 3,
+              maxLength: 40,
+              minLength: 2,
             })}
             placeholder="Email"
             type="email"
+            name="email"
           />
         </div>
         <div className="form__item">
@@ -72,6 +111,7 @@ export default function Form({ popupVisible, setPopupVisible }) {
             className="form__input area"
             {...register('message', {})}
             placeholder="Сообщение"
+            name="message"
           />
         </div>
         <input className="form__submit" type="submit" />
