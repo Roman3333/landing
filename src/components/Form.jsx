@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
-import emailjs from 'emailjs-com';
 
 export default function Form({ popupVisible, setPopupVisible }) {
   const useRefForm = useRef();
@@ -11,37 +10,8 @@ export default function Form({ popupVisible, setPopupVisible }) {
   } = useForm();
 
   const onSubmit = (data) => {
-    emailjs
-      .sendForm('service_ow8s3xp', 'template_gf15uyp', useRefForm.current, '6qyznvT5gYn0B0MbA')
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        },
-      );
-    useRefForm.current.reset();
-
-    // let faffaa = document.getElementById('form');
-    // console.log(faffaa);
-    // alert(JSON.stringify(data));
-
-    // let formData = new FormData(faffaa);
-    // formData.append('данные', data);
-
-    // let response = await fetch('sendmail.php', {
-    //   method: 'POST',
-    //   body: formData,
-    // });
-
-    // if (response.ok) {
-    //   let result = await response.json;
-    //   alert(result.message);
-    //   faffaa.reset();
-    // } else {
-    //   alert('ошибка');
-    // }
+    // data - это данные из полей формы
+    console.log(data);
   };
 
   return popupVisible === true ? (
