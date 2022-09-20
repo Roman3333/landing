@@ -88,6 +88,10 @@
   .about__item {
     margin: 8px 5px 15px;
   }
+  .portfolio ul li a {
+    min-width: 70px;
+    margin-bottom: 5px;
+  }
 }
 
 @media (max-width: 906px) {
@@ -109,14 +113,16 @@
   .portfolio__item {
     max-width: 330px;
   }
+  .portfolio ul {
+    bottom: -60px;
+    width: 420px;
+    text-align: center;
+  }
 }
 
 @media (max-width: 752px) {
   .portfolio__item {
     height: 300px;
-  }
-  .portfolio ul {
-    width: 360px;
   }
 }
 
@@ -127,6 +133,10 @@
 
   .price__link svg {
     display: none;
+  }
+  .portfolio ul {
+    left: 50%;
+    width: 100%;
   }
 }
 
@@ -146,6 +156,10 @@
   .blur {
     left: 40%;
     width: 80vw;
+  }
+  .portfolio ul li a {
+    min-width: 50px;
+    margin-bottom: 5px;
   }
 }
 

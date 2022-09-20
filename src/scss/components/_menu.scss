@@ -6,6 +6,32 @@
   left: 0;
   transform: translateX(-130%);
   transition: all 0.2s;
+  &__list {
+    position: relative;
+    padding-top: 10px;
+  }
+  &__close {
+    position: absolute;
+    right: 0%;
+    top: 1%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 30;
+
+    svg {
+      opacity: 0.7;
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .menu.active {

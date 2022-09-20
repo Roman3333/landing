@@ -2,7 +2,7 @@
   "name": "landing",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://roman3333.github.io/landing/",
+  "homepage": ".",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -12,6 +12,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.35.0",
+    "react-media": "^1.10.0",
     "react-paginate": "^8.1.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
