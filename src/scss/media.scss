@@ -124,6 +124,9 @@
   .portfolio__item {
     height: 300px;
   }
+  .menu__close {
+    right: -10%;
+  }
 }
 
 @media (max-width: 726px) {
@@ -193,32 +196,29 @@
   .footer__inner-items {
     margin-left: 15px;
   }
+  .portfolio ul li:first-child,
+  .portfolio ul li:last-child {
+    display: none;
+  }
+  .portfolio ul li a {
+    min-width: 40px;
+    margin-right: 5px;
+    width: 43px;
+  }
 }
 
 @media (max-width: 484px) {
   .price__item {
     font-size: 16px;
   }
-}
-
-@media (max-width: 449px) {
-  .menu__content {
-    width: 45%;
-  }
-  .blur {
-    left: 45%;
-  }
-}
-
-@media (max-width: 395px) {
-  .services__title {
-    font-size: 1.5em;
+  .menu__close {
+    right: -10%;
   }
   .menu__content {
-    width: 52%;
+    width: 56%;
   }
   .blur {
-    left: 52%;
+    left: 44%;
   }
 }
 
@@ -230,14 +230,12 @@
   .portfolio ul {
     width: 290px;
   }
-  .portfolio li {
-    width: 70px;
-  }
-  .portfolio ul li a {
-    min-width: 68px;
-  }
+
   .price__item {
     font-size: 14px;
+  }
+  .menu__close {
+    right: -7%;
   }
 }
 
