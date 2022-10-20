@@ -60,6 +60,7 @@
     padding: 15px 0;
     &.area {
       height: 150px;
+      resize: none;
     }
     &:hover {
       cursor: pointer;

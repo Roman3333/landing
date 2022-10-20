@@ -1,12 +1,14 @@
 import React, { useRef } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm, Controller } from 'react-hook-form';
 import emailjs from 'emailjs-com';
+import InputMask from 'react-input-mask';
 
 export default function Form({ popupVisible, setPopupVisible }) {
   const useRefForm = useRef();
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm();
 
@@ -22,26 +24,6 @@ export default function Form({ popupVisible, setPopupVisible }) {
         },
       );
     useRefForm.current.reset();
-
-    // let faffaa = document.getElementById('form');
-    // console.log(faffaa);
-    // alert(JSON.stringify(data));
-
-    // let formData = new FormData(faffaa);
-    // formData.append('данные', data);
-
-    // let response = await fetch('sendmail.php', {
-    //   method: 'POST',
-    //   body: formData,
-    // });
-
-    // if (response.ok) {
-    //   let result = await response.json;
-    //   alert(result.message);
-    //   faffaa.reset();
-    // } else {
-    //   alert('ошибка');
-    // }
   };
 
   return popupVisible === true ? (
@@ -78,21 +60,21 @@ export default function Form({ popupVisible, setPopupVisible }) {
             type="name"
             name="fullname"
           />
-          {errors.fullname && <p className="form__p">Только буквы и не менее 3 символов</p>}
+          {errors.fullname && <p className="form__p">Только буквы и не менее 2 символов</p>}
         </div>
         <div className="form__item">
-          <input
+          <InputMask
             className="form__input"
+            mask={'+7(999) 999-99-99'}
             {...register('phone', {
               required: true,
-              maxLength: 30,
-              minLength: 2,
             })}
             placeholder="Телефон(обязательно)"
             type="phone"
             name="phone"
           />
-          {errors.fullname && <p className="form__p">Введите телефон</p>}
+
+          {errors.phone && <p className="form__p">Введите телефон</p>}
         </div>
         <div className="form__item">
           <input
